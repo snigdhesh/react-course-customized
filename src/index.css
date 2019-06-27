@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  border: 1px solid black;
+  /* padding: 0;
+  font-family: sans-serif; */
+  background-color: whitesmoke;
+}
+
+.navbar{
+  height: 100px;
+  background-color: #333;
+  color: whitesmoke;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-item{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 30px 20px 0;
+  width: 78%;
+  border-bottom: 1px solid #cecece;
+  font-family: Roboto, sans-serif;
+  font-weight: 180;
+  font-size: 15px;
+  color: #333333;
+}
+
+input[type=checbox]{
+  margin-right: 10px;
+}
+
+.todo-list{
+  background-color: white;
+  margin: auto;
+  width: 58%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #efefef;
+  box-shadow:
+    /* The top layer shadow */
+    0 1px 1px rgba(0,0,0,0.15),
+    /* The second layer */
+    0 10px 0 -5px #eee,
+    /* The second layer shadow */
+    0 10px 1px -4px rgba(0,0,0,0.15),
+    /* The third layer */
+    0 20px 0 -10px #eee,
+    /* The third layer shadow */
+    0 20px 1px -9px rgba(0,0,0,0.15);
+  padding: 30px;
+}
