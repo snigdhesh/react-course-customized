@@ -1,0 +1,5 @@
+<Joke joke={{question:"Who's first? A hen or an egg?",answer:"Hen, cause eggs come from behind."}}></Joke>
+           <Joke joke={{question:"What did tie say to hat?",answer:"You go ahead, I'll hang around."}}></Joke>
+           <Joke joke={{question:"Can february march?",answer:"No, but april may."}}></Joke>
+           <Joke joke={{question:"What do you call a sheep with no legs and no head?",answer:"A cloud."}}></Joke>
+           <Joke joke={{answer:"Because, he is always spotted."}}></Joke>

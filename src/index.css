@@ -56,3 +56,16 @@ input[type=checbox]{
     0 20px 1px -9px rgba(0,0,0,0.15);
   padding: 30px;
 }
+
+.box-wrapper{
+  border: 1px solid black;
+  border-radius: 25px;
+  padding: 25px;
+  margin-top: 5%;
+  width: 100%;
+}
+
+.component-title{
+  color: #333;
+  border-bottom: 1px solid #333;
+}
