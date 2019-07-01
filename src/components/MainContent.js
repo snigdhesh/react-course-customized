@@ -6,6 +6,7 @@ import JokesData from '../models/JokesData';
 import ProductData from '../models/ProductData';
 import Product from './Product';
 import TodoData from '../models/TodoData';
+import EventHandling from './EventHandling';
 
 function MainContent(){
   const jokesData2=JokesData.map(joke=><Joke key={joke.id} joke={joke}/>)
@@ -39,6 +40,11 @@ function MainContent(){
             <div className="box-wrapper">
                 <h1 className="component-title">Product component(Using loop)</h1>
                 {productData2}
+            </div>
+
+            <div className="box-wrapper">
+                <h1 className="component-title">Event handling component(Hovering on this image will print something to console.)</h1>
+                <EventHandling/>
             </div>
         </main>
     )
