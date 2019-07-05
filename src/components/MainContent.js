@@ -7,12 +7,14 @@ import ProductData from '../models/ProductData';
 import Product from './Product';
 import TodoData from '../models/TodoData';
 import EventHandling from './EventHandling';
+import ConditionalRendering from './ConditionalRendering';
 
 class MainContent extends Component{
   constructor(){
     super();
     this.state={
-      todos:TodoData
+      todos:TodoData,
+      isLoading: true
     }
     this.handleChange=this.handleChange.bind(this);
   }
@@ -32,6 +34,14 @@ class MainContent extends Component{
     })
   }
 
+  componentDidMount(){
+    setTimeout(()=>{
+      this.setState({isLoading:false})
+    },5000)
+    //actually component is already rendered, but we are just faking time lag and changing state,
+    // to test conditional rendering
+  }
+
   render(){
     const jokesData2=JokesData.map(joke=><Joke key={joke.id} joke={joke}/>)
     const productData2=ProductData.map(product=><Product key={product.id} product={product}/>)
@@ -39,6 +49,12 @@ class MainContent extends Component{
   
       return (
           <main className="todo-list">
+             {/* Conditional rendering component */}
+             <div className="box-wrapper">
+                  <h1 className="component-title">Conditional Rendering component. (This component will render based on timer set: 3000)</h1>
+                  <ConditionalRendering isLoading={this.state.isLoading}/>
+              </div>
+
             {/* To do list component: This is written in a loop. */}
               <div className="box-wrapper">
                   <h1 className="component-title">Todo list component</h1>
@@ -71,6 +87,8 @@ class MainContent extends Component{
                   <h1 className="component-title">Event handling component.</h1>
                   <EventHandling/>
               </div>
+
+             
           </main>
       )
   }
