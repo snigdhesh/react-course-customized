@@ -8,15 +8,22 @@ import Product from './Product';
 import TodoData from '../models/TodoData';
 import EventHandling from './EventHandling';
 import ConditionalRendering from './ConditionalRendering';
+import Messages from '../models/Messages';
+import MessagesComponent from './MessagesComponent';
+import Auth2Component from './Auth2Component';
 
 class MainContent extends Component{
   constructor(){
     super();
+    
     this.state={
       todos:TodoData,
-      isLoading: true
+      isLoading: true,
+      unreadMessages:Messages,
+      isUserLoggedIn: false
     }
     this.handleChange=this.handleChange.bind(this);
+    this.handleSession=this.handleSession.bind(this);
   }
 
   handleChange(id){
@@ -31,6 +38,15 @@ class MainContent extends Component{
         todos:todos2
       }
 
+    })
+  }
+
+  handleSession(session){
+    this.setState(prevState=>{
+      console.log("Session used to be ",prevState.isUserLoggedIn);
+      return {
+        isUserLoggedIn:!session
+      }
     })
   }
 
@@ -49,21 +65,24 @@ class MainContent extends Component{
   
       return (
           <main className="todo-list">
+            <label className="label"> :MainContentComponent</label>
              {/* Conditional rendering component */}
              <div className="box-wrapper">
-                  <h1 className="component-title">Conditional Rendering component. (This component will render based on timer set: 3000)</h1>
-                  <ConditionalRendering isLoading={this.state.isLoading}/>
+                  <h4 className="component-title">Conditional Rendering </h4>
+                 <div className="col-sm-6" style={{"float":"left"}}> <label className="label">:ConditionalRenderingComponent</label> <ConditionalRendering isLoading={this.state.isLoading}/></div>
+                  <div className="col-sm-6"style={{"float":"left"}}><label className="label">:MessagesComponent</label> <MessagesComponent messages={this.state.unreadMessages}/></div>
+                  <div className="col-sm-6" style={{"float":"left"}}> <label className="label">:Auth2Component</label> <Auth2Component session={this.state.isUserLoggedIn} handleSession={this.handleSession}/></div>
               </div>
 
             {/* To do list component: This is written in a loop. */}
               <div className="box-wrapper">
-                  <h1 className="component-title">Todo list component</h1>
+                  <h4 className="component-title">Todo list <label className="label">:TodoItemComponent</label> </h4>
                   {todoData2}
               </div>
   
             {/* Contact card component : This is written without loop just for demonstration purposes. */}
               <div className="box-wrapper">
-                  <h1 className="component-title">Contact card component</h1>
+                  <h4 className="component-title">Contact card <label className="label">:ContactCardComponent</label></h4>
                   <ContactCard contact={{name:"Mr.Whiskerson",phone:"Phone: (212) 555-1234", email:"mr.whiskaz@catnap.meow",src:"http://placekitten.com/100/200"}}/>
                   <ContactCard contact={{name:"Mr.flyffykins",phone:"Phone: (212) 555-5678", email:"mr.fluffy@catnap.meow",src:"http://placekitten.com/200/300"}}/>
                   <ContactCard contact={{name:"Mr.destroyer",phone:"Phone: (212) 142-1234", email:"mr.destroyer@catnap.meow",src:"http://placekitten.com/300/400"}}/>
@@ -72,23 +91,21 @@ class MainContent extends Component{
   
             {/* Jokes component: This is written in a loop. */}
               <div className="box-wrapper">
-                  <h1 className="component-title">Jokes component(Using loop)</h1>
+                  <h4 className="component-title">Jokes (Using loop)  <label className="label">:JokeComponent</label></h4>
                   {jokesData2}
               </div>
   
             {/* Product component: This is written in a loop. */}
               <div className="box-wrapper">
-                  <h1 className="component-title">Product component(Using loop)</h1>
+                  <h4 className="component-title">Product (Using loop)  <label className="label">:ProductComponent</label></h4>
                   {productData2}
               </div>
   
               {/* Event handling */}
               <div className="box-wrapper">
-                  <h1 className="component-title">Event handling component.</h1>
+                  <h4 className="component-title">Event handling  <label className="label">:EventHandlingComponent</label></h4>
                   <EventHandling/>
-              </div>
-
-             
+              </div>             
           </main>
       )
   }

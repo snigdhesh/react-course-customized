@@ -11,7 +11,7 @@ class State extends Component{
     render(){
         return(
            <div>
-               <h1>{this.state.name},{this.state.age} years old (Adding state to class demo)</h1>
+               <h4>{this.state.name},{this.state.age} years old (Adding state to class demo) <label className="label"> :StateComponent</label></h4>
            </div>
         )
     }

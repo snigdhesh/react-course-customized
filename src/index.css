@@ -86,3 +86,26 @@ section > section {
 .indent-1 { 
   padding-left:2px;
 }
+
+.side-by-side{
+  float: left;
+}
+
+.cell-sm{
+  width:20%;
+}
+
+.cell-md{
+  width: 50%;
+}
+
+.cell-big{
+  width: 100%;
+}
+
+.label{
+  font-weight: bold;
+  font-size: 32px;
+  color: #CA0E28;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
