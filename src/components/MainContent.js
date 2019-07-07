@@ -41,11 +41,10 @@ class MainContent extends Component{
     })
   }
 
-  handleSession(session){
+  handleSession(){
     this.setState(prevState=>{
-      console.log("Session used to be ",prevState.isUserLoggedIn);
       return {
-        isUserLoggedIn:!session
+        isUserLoggedIn:!prevState.isUserLoggedIn
       }
     })
   }
@@ -69,7 +68,7 @@ class MainContent extends Component{
              {/* Conditional rendering component */}
              <div className="box-wrapper">
                   <h4 className="component-title">Conditional Rendering </h4>
-                 <div className="col-sm-6" style={{"float":"left"}}> <label className="label">:ConditionalRenderingComponent</label> <ConditionalRendering isLoading={this.state.isLoading}/></div>
+                 <div className="col-sm-12" style={{"float":"left"}}> <label className="label">:ConditionalRenderingComponent</label> <ConditionalRendering isLoading={this.state.isLoading}/></div>
                   <div className="col-sm-6"style={{"float":"left"}}><label className="label">:MessagesComponent</label> <MessagesComponent messages={this.state.unreadMessages}/></div>
                   <div className="col-sm-6" style={{"float":"left"}}> <label className="label">:Auth2Component</label> <Auth2Component session={this.state.isUserLoggedIn} handleSession={this.handleSession}/></div>
               </div>
