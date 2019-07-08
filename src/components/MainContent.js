@@ -11,6 +11,7 @@ import ConditionalRendering from './ConditionalRendering';
 import Messages from '../models/Messages';
 import MessagesComponent from './MessagesComponent';
 import Auth2Component from './Auth2Component';
+import ApiComponent from './ApiComponent';
 
 class MainContent extends Component{
   constructor(){
@@ -104,6 +105,12 @@ class MainContent extends Component{
               <div className="box-wrapper">
                   <h4 className="component-title">Event handling  <label className="label">:EventHandlingComponent</label></h4>
                   <EventHandling/>
+              </div>    
+
+               {/* API call */}
+               <div className="box-wrapper">
+                  <h4 className="component-title">API call <label className="label">:API component</label></h4>
+                  <ApiComponent/>
               </div>             
           </main>
       )
