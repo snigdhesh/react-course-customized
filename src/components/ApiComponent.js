@@ -31,9 +31,11 @@ class ApiComponent extends Component{
         let contentName= this.state.isLoading ? <span>Loading...</span> : <span>{content.name}</span>
         let films=this.state.isLoading? <span>Loading...</span>: content.films.map((item,index)=><div key={index}>{item}</div>)
         return(
-            <div>
+            <div className="container">
+                <h1>Api Component</h1>
+                <hr/><br/><br/>
                 <h5>Name </h5><hr/>
-                <label>{contentName}</label>
+                <label>{contentName}</label><br/><br/>
                 <h5>Films</h5><hr/>
                 <label>{films}</label>
             </div>

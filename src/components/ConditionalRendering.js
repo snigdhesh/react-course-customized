@@ -25,12 +25,14 @@ class ConditionalRendering extends Component{
     render(){        
         return(            
             
-             <div >
-                 <div className="box-wrapper">
+             <div className="container">
+                 <h1>Conditional Rendering Component</h1>
+                 <hr/>
+                 <div>
                     {
                         this.state.isLoading ? 
                             <span><h4>Loading ... </h4></span> :
-                            <h1>Conditional Component loaded !!!</h1>
+                            <h4>Conditional Component loaded !!!</h4>
                     }
                     <p>This displays "Loading..." while we fetch data from mocked server response.If loading is not done, it displays "Loading..." else it displays "component loaded". This is condition based rendering.</p>
                 </div>

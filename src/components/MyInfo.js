@@ -11,6 +11,8 @@ import ConditionalRendering from './ConditionalRendering';
 import FormsComponent from './forms/FormsComponent';
 import ApiComponent from './ApiComponent';
 import EventHandling from './EventHandling';
+import TodolistComponent from './Todolist/TodolistComponent';
+import ContactCardListComponent from './contact-card/ContactCardListComponent';
 
 function MyInfo(){
   return(
@@ -18,16 +20,17 @@ function MyInfo(){
     <div>
         <Header/>
         <NavbarComponent/>
-      
-          <Switch>
               <Route path="/pieces" component={ClassComponent}/>
               <Route path="/pieces" component={State}/>        
-              <Route path="/pieces" component={Auth}/>       
+              <Route path="/pieces" component={Auth}/> 
+          <Switch>      
               <Route path="/main" component={MainContent}/>
               <Route path="/conditional" component={ConditionalRendering}/>
               <Route path="/forms" component={FormsComponent}/>
               <Route path="/api" component={ApiComponent}/>
               <Route path="/event" component={EventHandling}/>
+              <Route path="/todolist" component={TodolistComponent}/>
+              <Route path="/contacts" component={ContactCardListComponent}/>
           </Switch>
       
         <Footer/>

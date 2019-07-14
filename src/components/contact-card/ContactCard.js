@@ -7,7 +7,7 @@ function ContactCard(props){
             <h3>{props.contact.name}</h3>
             <p>{props.contact.phone}</p>
             <p>{props.contact.email}</p>
-        </div>
+        </div>      
     )
 
 }

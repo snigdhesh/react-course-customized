@@ -9,14 +9,16 @@ li {
     text-decoration: none!important;
     color: whitesmoke;
   }
+
 li:hover{
     background-color: whitesmoke;
     color: #333;
 }
-li:focus {
+
+.active {
     background-color: #4CAF50;
     color: #333
-  }
+}
 
 ul{
     list-style-type: none;

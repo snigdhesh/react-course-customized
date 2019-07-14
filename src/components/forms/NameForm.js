@@ -1,44 +1,79 @@
 // This forms is used in FormsComponent.js
 
 import React,{Component} from 'react'
+import '../css/nameform.css';
 
 class NameForm extends Component{
     constructor(){
         super();
         this.state={
-            inputValue:'',
-            textAreaValue:''
+            nameValue:'',
+            emailValue:'',
+            messageValue:''
         }
-        this.handleInputChange=this.handleInputChange.bind(this);
-        this.handleTextAreaChange=this.handleTextAreaChange.bind(this);
+        this.handleNameChange=this.handleNameChange.bind(this);
+        this.handleEmailChange=this.handleEmailChange.bind(this);
+        this.handleMessageChange=this.handleMessageChange.bind(this);
         this.handleSubmit=this.handleSubmit.bind(this);
 
     }
 
-    handleInputChange(event){
-        this.setState({inputValue:event.target.value});        
+    handleNameChange(event){
+        this.setState({nameValue:event.target.value});        
     }
-    handleTextAreaChange(event){
-        this.setState({textAreaValue:event.target.value});        
+    handleMessageChange(event){
+        this.setState({messageValue:event.target.value});        
+    }
+    handleEmailChange(event){
+        this.setState({emailValue:event.target.value});
     }
 
     handleSubmit(){
-        alert("You entered first name as : " + this.state.inputValue
-            +"\nYou entered description as: "+this.state.textAreaValue);
-        
+        alert("You entered name as : " + this.state.nameValue
+            +"\nYou entered email as: "+this.state.emailValue
+            +"\nYou entered message as: "+this.state.messageValue);   
     }
 
     render(){
         return(
-           <form onSubmit={this.handleSubmit}>
-               Enter your name: <input type="text" value={this.state.inputValue} placeholder="firstName" onChange={this.handleInputChange}/>
-                <p>{this.state.inputValue}</p>
-               
-               <p>Enter description:</p>
-               <textarea value={this.state.textAreaValue} onChange={this.handleTextAreaChange}></textarea>
-               <p>{this.state.textAreaValue}</p>
-               <input type="submit" value="submit"/>
-           </form>
+            <div className="container">
+                <h1>Name Form Component</h1><hr/>
+                <form onSubmit={this.handleSubmit}>                    
+                    <div className="row">
+                        <div className="col-md-6">
+                            <h6>Name</h6>
+                            <input type="text" className="form-control" value={this.state.naveValue} placeholder="naga"
+                                onChange={this.handleNameChange} />
+                        </div>
+                        <div className="col-md-6"> <span>{this.state.nameValue}</span></div>
+                    </div>
+
+                    <div className="row">
+                        <div className="col-md-6">
+                            <h6>Email</h6>
+                            <input type="text" className="form-control" value={this.state.emailValue} placeholder="example@naga.com"
+                                onChange={this.handleEmailChange} />
+                        </div>
+                        <div className="col-md-6"> <span>{this.state.emailValue}</span></div>
+                    </div>
+
+                    <div className="row">
+                        <div className="col-md-6">
+                            <h6>Message</h6>
+                            <textarea value={this.state.messageValue} className="form-control" placeholder="You can contact me for any questions regarding this sample react project I developed."
+                                onChange={this.handleMessageChange}></textarea>
+                        </div>
+                        <div className="col-md-6">
+                            {this.state.messageValue}
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-md-12">
+                            <input type="submit" className="btn btn-dark" value="submit" />
+                        </div>
+                    </div>
+                </form>
+           </div>
         )
     }
 }

@@ -60,11 +60,19 @@ input[type=checbox]{
 
 .box-wrapper{
   border: 1px solid black;
-  border-radius: 25px;
+  border-radius: 20px;
   padding: 25px;
   margin: 1%;
-  width: 95%;
+  width: 100%;
   overflow: hidden;
+}
+
+.container{
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 2%;
+  overflow: hidden;
+  margin-top: 2%;
 }
 
 .component-title{

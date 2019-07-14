@@ -5,7 +5,9 @@ class FormsComponent extends Component{
     render(){
       console.log("In forms component !!!");
         return(
-          <div>
+          <div className="container">
+            <h1>Forms Component</h1>
+            <hr/>
             <p>An input form element whose value is controlled by React, is called a <b>controlled component</b>.</p>            
             <p><b>regular forms:</b> all form data is in match with state, ex: input box data, is updated to state.</p>
             <p><b>controlled forms:</b> Here state directs what to show in input box.</p>
