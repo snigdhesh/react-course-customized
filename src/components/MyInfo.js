@@ -15,6 +15,7 @@ import TodolistComponent from './Todolist/TodolistComponent';
 import ContactCardListComponent from './contact-cards/ContactCardListComponent';
 import JokeListComponent from './Jokes/JokeListComponent';
 import ProductListComponent from './products/ProductListComponent';
+import SourceListComponent from './sources/SourceListComponent';
 
 function MyInfo(){
   return(
@@ -35,6 +36,7 @@ function MyInfo(){
               <Route path="/contacts" component={ContactCardListComponent}/>
               <Route path="/jokes" component={JokeListComponent}/>
               <Route path="/products" component={ProductListComponent}/>
+              <Route path="/sources" component={SourceListComponent}/>
           </Switch>
       
         <Footer/>

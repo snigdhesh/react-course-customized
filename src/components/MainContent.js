@@ -25,13 +25,13 @@ class MainContent extends Component{
     })
   }
 
-  // componentDidMount(){
-  //   setTimeout(()=>{
-  //     this.setState({isLoading:false})
-  //   },5000)
-  //   //actually component is already rendered, but we are just faking time lag and changing state,
-  //   // to test conditional rendering
-  // }
+  componentDidMount(){
+    setTimeout(()=>{
+      this.setState({isLoading:false})
+    },1000)
+    //actually component is already rendered, but we are just faking time lag and changing state,
+    // to test conditional rendering
+  }
 
   render(){
     
@@ -43,15 +43,14 @@ class MainContent extends Component{
                 <a href="http://placekitten.com/" target="_blank"> place kitten</a>,
                 <a href="http://www.fillmurray.com/" target="_blank"> fill murray</a>
               </div>
-              
+
               <TodolistComponent/>
               <ContactCardListComponent/>
               <JokeListComponent/>
               <ProductListComponent/>
           </main>
       )
-  }
- 
+    }
 }
 
 export default MainContent

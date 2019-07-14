@@ -16,6 +16,7 @@ class NavbarComponent extends Component{
                     <Link to="/contacts"><li>contact cards</li></Link>
                     <Link to="/jokes"><li>Jokes</li></Link>
                     <Link to="/products"><li>Products</li></Link>
+                    <Link to="/sources"><li>Sources</li></Link>
                 </ul>            
         )
     }
