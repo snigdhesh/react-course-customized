@@ -15,8 +15,9 @@ class Auth extends Component{
             wordDisplay="out"
         }
         return(
-            <div>
-                <h4>You are currently logged {wordDisplay}(Simple authentication message demo via switching state) <label className="label"> :AuthComponent</label></h4> 
+            <div className="container">
+                <h1>Auth Component</h1><hr/>
+                <h4>You are currently logged {wordDisplay} (Simple authentication message demo via switching state) </h4> 
             </div>
         )
     };

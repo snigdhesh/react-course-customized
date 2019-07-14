@@ -3,7 +3,8 @@ import React,{Component} from 'react';
 class ClassComponent extends Component{
     render(){
         return(
-           <div>
+           <div className="container">
+               <h1>Class Component</h1><hr/>
                 <Header username="naga"/>
                 <Greeting/>
            </div>
@@ -14,8 +15,9 @@ class ClassComponent extends Component{
 class Header extends Component{
     render(){
         return (
-            <div>
-                <h4>You are in header of ClassComponent: {this.props.username} (Passing props in class component demo)  <label className="label"> :ClassComponent</label></h4>
+            <div className="container">
+                <h1>Internal Header Component (this is not imported)</h1>
+                <p>You are in header of ClassComponent: {this.props.username} (Passing props in class component demo)</p>
             </div>
         )
     }
@@ -39,7 +41,10 @@ class Greeting extends Component{
     }
 
     return(
-        <h4>Hey !! Good {timeOfDay}! (Greeting Class component demo)  <label className="label"> :ClassComponent</label></h4>
+        <div className="container">
+            <h1>Internal Greeting Component (this is not imported)</h1>
+            <p>Hey !! Good {timeOfDay}! (Greeting Class component demo)</p>
+        </div>
     )
   }
 }

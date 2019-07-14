@@ -12,7 +12,9 @@ import FormsComponent from './forms/FormsComponent';
 import ApiComponent from './ApiComponent';
 import EventHandling from './EventHandling';
 import TodolistComponent from './Todolist/TodolistComponent';
-import ContactCardListComponent from './contact-card/ContactCardListComponent';
+import ContactCardListComponent from './contact-cards/ContactCardListComponent';
+import JokeListComponent from './Jokes/JokeListComponent';
+import ProductListComponent from './products/ProductListComponent';
 
 function MyInfo(){
   return(
@@ -31,6 +33,8 @@ function MyInfo(){
               <Route path="/event" component={EventHandling}/>
               <Route path="/todolist" component={TodolistComponent}/>
               <Route path="/contacts" component={ContactCardListComponent}/>
+              <Route path="/jokes" component={JokeListComponent}/>
+              <Route path="/products" component={ProductListComponent}/>
           </Switch>
       
         <Footer/>
