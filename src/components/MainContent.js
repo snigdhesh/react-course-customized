@@ -6,12 +6,7 @@ import JokesData from '../models/JokesData';
 import ProductData from '../models/ProductData';
 import Product from './Product';
 import TodoData from '../models/TodoData';
-import EventHandling from './EventHandling';
-import ConditionalRendering from './ConditionalRendering';
 import Messages from '../models/Messages';
-import MessagesComponent from './MessagesComponent';
-import Auth2Component from './Auth2Component';
-import ApiComponent from './ApiComponent';
 
 class MainContent extends Component{
   constructor(){
@@ -35,10 +30,7 @@ class MainContent extends Component{
         }
         return item
       })
-      return{
-        todos:todos2
-      }
-
+      return{todos:todos2}
     })
   }
 
@@ -50,13 +42,13 @@ class MainContent extends Component{
     })
   }
 
-  componentDidMount(){
-    setTimeout(()=>{
-      this.setState({isLoading:false})
-    },5000)
-    //actually component is already rendered, but we are just faking time lag and changing state,
-    // to test conditional rendering
-  }
+  // componentDidMount(){
+  //   setTimeout(()=>{
+  //     this.setState({isLoading:false})
+  //   },5000)
+  //   //actually component is already rendered, but we are just faking time lag and changing state,
+  //   // to test conditional rendering
+  // }
 
   render(){
     const jokesData2=JokesData.map(joke=><Joke key={joke.id} joke={joke}/>)
@@ -66,13 +58,10 @@ class MainContent extends Component{
       return (
           <main className="todo-list">
             <label className="label"> :MainContentComponent</label>
-             {/* Conditional rendering component */}
-             <div className="box-wrapper">
-                  <h4 className="component-title">Conditional Rendering </h4>
-                 <div className="col-sm-12" style={{"float":"left"}}> <label className="label">:ConditionalRenderingComponent</label> <ConditionalRendering isLoading={this.state.isLoading}/></div>
-                  <div className="col-sm-6"style={{"float":"left"}}><label className="label">:MessagesComponent</label> <MessagesComponent messages={this.state.unreadMessages}/></div>
-                  <div className="col-sm-6" style={{"float":"left"}}> <label className="label">:Auth2Component</label> <Auth2Component session={this.state.isUserLoggedIn} handleSession={this.handleSession}/></div>
-              </div>
+            <div>Source for dummy images:
+              <a href="http://placekitten.com/" target="_blank"> place kitten</a>,
+              <a href="http://www.fillmurray.com/" target="_blank"> fill murray</a>
+            </div>
 
             {/* To do list component: This is written in a loop. */}
               <div className="box-wrapper">
@@ -100,18 +89,6 @@ class MainContent extends Component{
                   <h4 className="component-title">Product (Using loop)  <label className="label">:ProductComponent</label></h4>
                   {productData2}
               </div>
-  
-              {/* Event handling */}
-              <div className="box-wrapper">
-                  <h4 className="component-title">Event handling  <label className="label">:EventHandlingComponent</label></h4>
-                  <EventHandling/>
-              </div>    
-
-               {/* API call */}
-               <div className="box-wrapper">
-                  <h4 className="component-title">API call <label className="label">:API component</label></h4>
-                  <ApiComponent/>
-              </div>             
           </main>
       )
   }

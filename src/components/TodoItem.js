@@ -9,10 +9,6 @@ class TodoItem extends React.Component{
     }
     return (
         <div>
-            {/* <div className="todo-item">
-                <input type="checkbox" checked={props.item.completed} onChange={()=>props.handleChange(props.item.id)}/>
-                <p>{props.item.text}</p>
-            </div> */}
             <div className="form-check">
                 <label className="form-check-label" >
                     <input type="checkbox" className="form-check-input" checked={this.props.item.completed} onChange={()=>this.props.handleChange(this.props.item.id)}/>
@@ -20,9 +16,7 @@ class TodoItem extends React.Component{
                 </label>
             </div>
         </div>
-
-
-)
+        )
    }
 }
 

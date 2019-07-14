@@ -6,28 +6,37 @@ class ApiComponent extends Component{
         super();
         this.state={
             isLoading: true,
-            character:{}
+            character:{},
+            content: []
         }
     }
 
     componentDidMount(){
         setTimeout(()=>{
-            console.log("component loaded");
             fetch("https://swapi.co/api/people/1")
             .then(res=>res.json())
             .then(data=>{
                 this.setState({
                     isLoading: false,
-                    character: data})
+                    content: data})
             }); 
-        },3500);
-       
-       
+        },4000);       
     }
-    render(){
-        let content= this.state.isLoading ? <span>Loading...</span> : <span>{this.state.character.name}</span>
+
+    render(){     
+    console.log("In api component !!");
+    console.log("current page is loading: ",this.state.isLoading);
+         
+        let content = this.state.isLoading ? null :this.state.content;
+        let contentName= this.state.isLoading ? <span>Loading...</span> : <span>{content.name}</span>
+        let films=this.state.isLoading? <span>Loading...</span>: content.films.map((item,index)=><div key={index}>{item}</div>)
         return(
-            <div>{content}</div>
+            <div>
+                <h5>Name </h5><hr/>
+                <label>{contentName}</label>
+                <h5>Films</h5><hr/>
+                <label>{films}</label>
+            </div>
         )
     }
 }
