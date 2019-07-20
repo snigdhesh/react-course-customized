@@ -1,5 +1,6 @@
 import React,{Component} from 'react'
 import NameForm from './NameForm';
+import TravelForm from './TravelForm';
 
 class FormsComponent extends Component{
     render(){
@@ -13,6 +14,7 @@ class FormsComponent extends Component{
             <p><b>controlled forms:</b> Here state directs what to show in input box.</p>
             <p>To put is simply, in reg forms, form data is passed to state, and in controlled forms state decides what to show in form.</p>
             <NameForm/>
+            <TravelForm/>
           </div>
         )
     }
