@@ -51,11 +51,14 @@ class NameForm extends Component{
             +"\nYou entered message as: "+this.state.message
             +"\nYour favourite course is: "+this.state.course
             +"\n"+clientTech+" and "+serverTech);   
+            event.preventDefault(); //sometimes page will refresh after submit, this will avoid that
     }
 
     render(){
         let labelStyle={
-            border: "0px solid black"
+            border: "0px solid black",
+            padding: "1.5%",//This makes text align to vertical center
+            color: ""
         }
         let clientTech, serverTech;
         if(this.state.clientTech){clientTech="clientTechnologies"}
@@ -66,22 +69,20 @@ class NameForm extends Component{
                 <form onSubmit={this.handleSubmit}>                    
                     <div className="row">
                         <div className="col-md-2" style={labelStyle}><h6>Name</h6></div>
-                        <div className="col-md-4"> 
-                            <input name="name" type="text" className="form-control" value={this.state.name} onChange={this.handleInputElement} placeholder="naga"/>
-                        </div>
-                        <div className="col-md-4"> <span>{this.state.name}</span></div>
+                        <div className="col-md-4"><input name="name" type="text" className="form-control" value={this.state.name} onChange={this.handleInputElement} placeholder="naga"/></div>
+                        <div className="col-md-4" style={labelStyle}> <span>{this.state.name}</span></div>
                     </div>
 
                     <div className="row">
                         <div className="col-md-2" style={labelStyle}><h6>Email</h6></div>
                         <div className="col-md-4"><input name="email" type="text" className="form-control" value={this.state.email} onChange={this.handleInputElement} placeholder="naga@example.com"/></div>
-                        <div className="col-md-4"> <span>{this.state.email}</span></div>
+                        <div className="col-md-4" style={labelStyle}> <span>{this.state.email}</span></div>
                     </div>
 
                     <div className="row">
                         <div className="col-md-2" style={labelStyle}><h6>Message</h6></div>
                         <div className="col-md-4"><textarea name="message" value={this.state.message} className="form-control" placeholder="You can contact me for any questions regarding this sample react project I developed." onChange={this.handleInputElement}></textarea></div>
-                        <div className="col-md-4">{this.state.message}</div>
+                        <div className="col-md-4" style={labelStyle}>{this.state.message}</div>
                     </div>
 
                     
