@@ -20,7 +20,7 @@ class ApiComponent extends Component{
                     isLoading: false,
                     content: data})
             }); 
-        },4000);       
+        },2000);       
     }
 
     render(){     

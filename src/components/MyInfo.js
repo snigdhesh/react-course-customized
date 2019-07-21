@@ -16,6 +16,8 @@ import ContactCardListComponent from './contact-cards/ContactCardListComponent';
 import JokeListComponent from './Jokes/JokeListComponent';
 import ProductListComponent from './products/ProductListComponent';
 import SourceListComponent from './sources/SourceListComponent';
+import CapstoneMainComponent from '../capstone-project/CapstoneMainComponent';
+import ChallengesComponent from './ChallengesComponent';
 
 function MyInfo(){
   return(
@@ -37,6 +39,8 @@ function MyInfo(){
               <Route path="/jokes" component={JokeListComponent}/>
               <Route path="/products" component={ProductListComponent}/>
               <Route path="/sources" component={SourceListComponent}/>
+              <Route path="/capstone" component={CapstoneMainComponent}/>
+              <Route path="/challenges" component={ChallengesComponent}/>
           </Switch>
       
         <Footer/>

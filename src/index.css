@@ -4,21 +4,26 @@ body {
   /* padding: 0;
   font-family: sans-serif; */
   background-color: whitesmoke;
-  overflow: auto;
+  overflow: scroll; 
+  /* overflow: scroll -  This is brillant property to avoid page repositioning due to scroll bar */
 }
 
 .header{
-  height: 100px;
+  height: 150px;
   width: 100%;
   background-color: #333;
   color: whitesmoke;
   margin-bottom: 15px;
   text-align: center;
   font-size: 30px;
-  display: flex;
+  display:grid;
   justify-content: center;
   align-items: center;
+  padding: 2%;
+  line-height: 2%;
 }
+
+
 
 .todo-item{
   display: flex;
@@ -135,4 +140,123 @@ footer{
   font-size: 32px;
   color: #CA0E28;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* *********************** capstone project css ****************************** */
+
+.capstone-body{
+  margin: 0;
+  background-color: whitesmoke;
+  overflow: hidden;
+}
+.capstone-header{
+  height: 100px;
+  display: flex;
+  align-items: center;
+  background: #6441A5;
+  background: -webkit-linear-gradient(to right,#2a0845,#6441A5);
+  background: linear-gradient(to right,#2a0845,#6441A5);
+}
+
+.capstone-header > img{
+  height: 80%;
+  margin-left: 10%;
+}
+
+.capstone-header >p {
+  font-family: VT323, monospace;
+  color: whitesmoke;
+  font-size: 50px;
+  margin-left: 60px;
+}
+
+.capstone-meme{
+  position: relative;
+  width: 90%;
+  margin: auto;
+}
+
+.capstone-meme > img{
+  width: 20%;
+  margin-left:40%;
+}
+
+.capstone-meme > h2{
+  position: absolute;
+  width: 80%;
+  text-align: center;
+  left: 10%;
+  transform: translateY(-50%);
+  margin: 25px 0 -10px 0;
+  padding: 0 5px;
+  font-family: Impact, sans-serif;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow:
+      2px 2px 0 #000,
+      -2px -2px 0 #000,
+      2px -2px 0 #000,
+      -2px 2px 0 #000,
+      0 2px 0 #000,
+      2px 0 0 #000,
+      0 -2px 0 #000,
+      -2px 0 0 #000,
+      2px 2px 5px #000;
+}
+
+.capstone-meme > .bottom{
+  bottom: 0;
+}
+
+.capstone-meme > .top{
+  top: 0;
+}
+
+.capstone-meme-form{
+  width: 90%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.capstone-meme-form > input{
+  width: 45%;
+  height: 40px;
+}
+
+.capstone-meme-form > button{
+  border: none;
+  font-family: VT323, monospace;
+  font-size: 25px;
+  letter-spacing: 1.5px;
+  color: white;
+  background: #6441A5;
+  height: 40px;
+  margin-top: 2%;
+}
+
+.capstone-meme-form > input::-webkit-input-placeholder{
+  font-family: VT323, monospace;
+  font-size: 25px;
+  text-align: cen
+}
+
+.capstone-meme-form > input::-moz-placeholder{
+  font-family: VT323, monospace;
+  font-size: 25px;
+  text-align: cen
+}
+
+.capstone-meme-form > input::-ms-input-placeholder{
+  font-family: VT323, monospace;
+  font-size: 25px;
+  text-align: cen
+}
+
+.capstone-meme-form > input::-moz-placeholder{
+  font-family: VT323, monospace;
+  font-size: 25px;
+  text-align: cen
 }

@@ -15,7 +15,7 @@ li:hover{
     color: #333;
 }
 
-.active {
+li::selection {
     background-color: #4CAF50;
     color: #333
 }

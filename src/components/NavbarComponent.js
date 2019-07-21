@@ -3,6 +3,7 @@ import './css/navbar.css';
 import {Link} from 'react-router-dom';
 
 class NavbarComponent extends Component{
+
     render(){
         return(
                 <ul>
@@ -17,6 +18,8 @@ class NavbarComponent extends Component{
                     <Link to="/jokes"><li>Jokes</li></Link>
                     <Link to="/products"><li>Products</li></Link>
                     <Link to="/sources"><li>Sources</li></Link>
+                    <Link to="/capstone"><li>Capstone project</li></Link>
+                    <Link to="/challenges"><li>Challenges I faced</li></Link>
                 </ul>            
         )
     }
