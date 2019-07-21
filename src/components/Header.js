@@ -20,7 +20,7 @@ class Header extends React.Component{
     render(){
         return (
             <header className="header">
-                <Link to="/home"><img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1024px-React-icon.svg.png" alt="banner-logo"/></Link>
+                <Link to="/"><img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1024px-React-icon.svg.png" alt="banner-logo"/></Link>
                 <p>Header</p>
                 <p style={{opacity: 0.5}}>This project is assembled and customized by Naga Vadlapudi</p>
             </header>

@@ -30,7 +30,7 @@ function MyInfo(){
               <Route path="/pieces" component={State}/>        
               <Route path="/pieces" component={Auth}/> 
           <Switch>     
-              <Route exact path="/home" component={HomeComponent}/>
+              <Route exact path="/" component={HomeComponent}/>
               <Route path="/main" component={MainContent}/>
               <Route path="/conditional" component={ConditionalRendering}/>
               <Route path="/forms" component={FormsComponent}/>
