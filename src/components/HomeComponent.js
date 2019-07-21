@@ -10,6 +10,7 @@ class HomeComponent extends Component{
                     <li>This project is inspired, assembled and customized from <b>Free code camp</b> tutorial by <b>Bob Ziroll</b>.</li>
                     <li>I faced few challenges while construction, which you can find under <b>Challenges I faced</b> menu item.</li>
                     <li>All sources I referred are under <b>sources</b> menu item.</li>
+                    <li>Click on <b>logo</b> to return to this page at any time!!</li>
                 </ul>
             </div>
         )
