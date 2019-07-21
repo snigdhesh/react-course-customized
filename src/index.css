@@ -12,18 +12,28 @@ body {
   height: 150px;
   width: 100%;
   background-color: #333;
+  border: 0px solid red;
   color: whitesmoke;
   margin-bottom: 15px;
   text-align: center;
   font-size: 30px;
-  display:grid;
+  display:block;
   justify-content: center;
   align-items: center;
   padding: 2%;
-  line-height: 2%;
+  line-height: 25px;
 }
 
+.header > p{
+  border: 0px solid green;
+}
 
+#logo{
+  opacity: 0.6;
+  width: 10%;
+  float: left;
+  border: 0px solid red;
+}
 
 .todo-item{
   display: flex;
@@ -259,4 +269,27 @@ footer{
   font-family: VT323, monospace;
   font-size: 25px;
   text-align: cen
+}
+
+/* ************************ navbar css ********************** */
+
+.nav-bar > ul li {
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none!important;
+  color: whitesmoke;
+}
+
+.nav-bar > ul  li:hover {
+  background-color: whitesmoke;
+  color: #333;
+}
+
+.nav-bar > ul{
+  list-style-type: none;
+  overflow: hidden;
+  background-color: #333;
+  margin-top: -14.5px;
 }

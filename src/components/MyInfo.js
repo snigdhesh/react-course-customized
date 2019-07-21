@@ -18,6 +18,7 @@ import ProductListComponent from './products/ProductListComponent';
 import SourceListComponent from './sources/SourceListComponent';
 import CapstoneMainComponent from '../capstone-project/CapstoneMainComponent';
 import ChallengesComponent from './ChallengesComponent';
+import HomeComponent from './HomeComponent';
 
 function MyInfo(){
   return(
@@ -28,7 +29,8 @@ function MyInfo(){
               <Route path="/pieces" component={ClassComponent}/>
               <Route path="/pieces" component={State}/>        
               <Route path="/pieces" component={Auth}/> 
-          <Switch>      
+          <Switch>     
+              <Route exact path="/home" component={HomeComponent}/>
               <Route path="/main" component={MainContent}/>
               <Route path="/conditional" component={ConditionalRendering}/>
               <Route path="/forms" component={FormsComponent}/>
