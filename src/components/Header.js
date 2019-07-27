@@ -22,7 +22,7 @@ class Header extends React.Component{
             <header className="header">
                 <Link to="/"><img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1024px-React-icon.svg.png" alt="banner-logo"/></Link>
                 <p>Header</p>
-                <p style={{opacity: 0.5}}>This project is assembled and customized by Naga Vadlapudi</p>
+                <div className="col-xs-12"><p style={{opacity: 0.5}}>This project is assembled and customized by Naga Vadlapudi</p></div>
             </header>
     
         )

@@ -4,7 +4,6 @@ import TravelForm from './TravelForm';
 
 class FormsComponent extends Component{
     render(){
-      console.log("In forms component !!!");
         return(
           <div className="container">
             <h1>Forms Component</h1>

@@ -7,7 +7,8 @@ class ApiComponent extends Component{
         this.state={
             isLoading: true,
             character:{},
-            content: []
+            content: [],
+            isComponentLoaded: false,
         }
     }
 
@@ -22,11 +23,8 @@ class ApiComponent extends Component{
             }); 
         },2000);       
     }
-
-    render(){     
-    console.log("In api component !!");
-    console.log("current page is loading: ",this.state.isLoading);
-         
+ 
+    render(){         
         let content = this.state.isLoading ? null :this.state.content;
         let contentName= this.state.isLoading ? <span>Loading...</span> : <span>{content.name}</span>
         let films=this.state.isLoading? <span>Loading...</span>: content.films.map((item,index)=><div key={index}>{item}</div>)

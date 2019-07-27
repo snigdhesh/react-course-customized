@@ -19,7 +19,6 @@ class CapstoneMemeGeneratorComponent extends Component{
             .then(jsonres=>{
                 //"jsonres.data.memes" can be written as const{memes} = jsonres.data
                 const{memes}=jsonres.data;
-                console.log(memes[0]);
                 this.setState({allMemeImgs:memes});
             })
     }
